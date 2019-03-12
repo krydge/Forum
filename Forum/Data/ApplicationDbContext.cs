@@ -15,5 +15,6 @@ namespace Forum.Data
         }
         public DbSet<Forum.Models.PostModel> PostModel { get; set; }
         public DbSet<Forum.Models.SubClassModel> SubClassModel { get; set; }
+        public DbSet<Forum.Models.CommentModel> CommentModel { get; set; }
     }
 }
