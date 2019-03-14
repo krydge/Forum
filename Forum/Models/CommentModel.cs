@@ -11,5 +11,7 @@ namespace Forum.Models
         public string Creator { get; set; }
         public string Comment { get; set; }
         public DateTime dateTime { get; set; }
+
+        public List<CommentModel> CommentArray {get; set;}
     }
 }

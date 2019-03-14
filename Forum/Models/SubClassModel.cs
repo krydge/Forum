@@ -13,6 +13,7 @@ namespace Forum.Models
         public string Description { get; set; }
         public DateTime dateTime { get; set; }
 
+        public List<CommentModel> CommentArray { get; set; }
     }
     
 }
