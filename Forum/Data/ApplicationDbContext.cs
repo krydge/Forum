@@ -16,5 +16,14 @@ namespace Forum.Data
         public DbSet<Forum.Models.PostModel> PostModel { get; set; }
         public DbSet<Forum.Models.SubClassModel> SubClassModel { get; set; }
         public DbSet<Forum.Models.CommentModel> CommentModel { get; set; }
+
+        protected override void OnModelCreating(ModelBuilder builder)
+        {
+            base.OnModelCreating(builder);
+
+            builder.Entity<PostModel>()
+                .HasMany(s => s.SubClass)
+                .WithOne(p => p.Post);
+        }
     }
 }

@@ -11,7 +11,7 @@ namespace Forum.Models
         public string Title { get; set; }
         public string Description { get; set; }
 
-        public List<SubClassModel> SubArray { get; set; }
+        public ICollection<SubClassModel> SubClass { get; set; }
     }
 }
 
