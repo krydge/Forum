@@ -24,6 +24,12 @@ namespace Forum.Data
             builder.Entity<PostModel>()
                 .HasMany(s => s.SubClass)
                 .WithOne(p => p.Post);
+
+            builder.Entity<SubClassModel>()
+                .HasMany(c => c.CommentArray)
+                .WithOne(s => s.SubClass);
+
+
         }
     }
 }

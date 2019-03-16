@@ -14,7 +14,7 @@ namespace Forum.Models
         public DateTime dateTime { get; set; }
         public PostModel Post { get; set; }
 
-        public List<CommentModel> CommentArray { get; set; }
+        public ICollection<CommentModel> CommentArray { get; set; }
     }
     
 }

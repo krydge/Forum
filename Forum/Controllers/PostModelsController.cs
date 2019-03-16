@@ -54,7 +54,7 @@ namespace Forum.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Title,Description")] PostModel postModel)
+        public async Task<IActionResult> Create([Bind("Id,Title,Description,SubClass")] PostModel postModel)
         {
             if (ModelState.IsValid)
             {
@@ -86,7 +86,7 @@ namespace Forum.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(string id, [Bind("Id,Title,Description")] PostModel postModel)
+        public async Task<IActionResult> Edit(string id, [Bind("Id,Title,Description,SubClass")] PostModel postModel)
         {
             if (id != postModel.Id)
             {
